@@ -92,8 +92,15 @@ var appCss = compileSass(appAndDependencies, appNamespace + '/styles/app.scss', 
     cssDir: '/assets'
 })
 
+var configFiles = pickFiles('config', {
+    inputFiles: ['**/*.js'],
+    srcDir: '/',
+    destDir: '/config'
+})
+
 var publicFiles = 'public'
-var filesToExport = [applicationJs, appCss, publicFiles, vendorFiles]
+
+var filesToExport = [applicationJs, appCss, publicFiles, configFiles, vendorFiles]
 
 //add the test files if we're not in production
 if(env !== 'production'){
