@@ -7,6 +7,17 @@
   <link href="/assets/app.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
+
+  <script src="/config/environment.js"></script>
+
+  <!--(if target test)><!-->
+  <script src="/config/test.js"></script>
+  <!--<!(endif)-->
+
+  <!--(if target production)><!-->
+  <script src="/config/production.js"></script>
+  <!--<!(endif)-->
+
   <script>
     window.App = require('broccoli-ember/app').default.create();
   </script>

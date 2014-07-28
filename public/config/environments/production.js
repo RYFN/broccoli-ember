@@ -1,0 +1,1 @@
+window.ENV.somekey = '123456abc';
